@@ -17,8 +17,9 @@ public class CreateFile {
 
         pw.close();
 
-        File sourceFile = new File("C:\\Users\\SvetlanaNikonova\\Desktop\\MyJavaHWorks\\myFile.csv");
-        File destinationFile = new File("C:\\Users\\SvetlanaNikonova\\Downloads\\myFile.csv");
+        File sourceFile = new File( "myFile.csv");
+        File destinationFile = new File("C:" + File.separator + "Users" + File.separator + "SvetlanaNikonova" +
+                File.separator + "Downloads" + File.separator + "myFile.csv");
 
         try {
             Files.copy(sourceFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
